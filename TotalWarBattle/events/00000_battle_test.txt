@@ -1,0 +1,2 @@
+﻿namespace = battle_test
+battle_test.2 = { type = country_event hidden = yes immediate = { rome_two_battle_results_effect = yes } }

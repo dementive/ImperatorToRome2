@@ -1,0 +1,99 @@
+﻿
+battles_sgui = {
+	#confirm_title = "confirm_anoint_heir_t"
+	#confirm_text = "confirm_anoint_heir_desc"
+    scope = unit
+    saved_scopes = {
+    	other_unit
+    }
+    is_shown = {
+		
+    } 
+	ai_is_valid = {
+		always = no
+	}
+    is_valid = {
+		
+    }
+    effect = {
+    	save_scope_as = "current_unit"
+    	debug_log = "DEBUG_START"
+    	if = {
+    		limit = {
+    			root.unit_owner = {
+    				is_ai = no
+    			}
+    		}
+    		debug_log = "DEBUG_player: attacker"
+    	}
+    	else = {
+    		debug_log = "DEBUG_player: defender"
+    	}
+		debug_log = "DEBUG_NEWUNIT"
+		unit_owner = {
+			debug_log = "DEBUG_attacker: [THIS.GetCountry.GetNameWithNoTooltip]"
+			debug_log = "DEBUG_country_culture: [THIS.GetCountry.GetPrimaryCulture.GetNameWithNoTooltip]"
+		}
+		if = {
+			limit = {
+				exists = commander
+			}
+			commander = {
+				debug_log = "DEBUG_commander: [THIS.GetCharacter.GetNameWithNoTooltip]"
+				debug_log = "DEBUG_commander_martial: [THIS.GetCharacter.GetMartial]"
+				debug_log = "DEBUG_commander_culture: [THIS.GetCharacter.GetCulture.GetNameWithNoTooltip]"
+			}
+		}
+		debug_log = "DEBUG_light_infantry: [SCOPE.ScriptValue('light_infantry_in_army_svalue')]"
+		debug_log = "DEBUG_heavy_infantry: [SCOPE.ScriptValue('heavy_infantry_in_army_svalue')]"
+		debug_log = "DEBUG_heavy_cavalry: [SCOPE.ScriptValue('heavy_cavalry_in_army_svalue')]"
+		debug_log = "DEBUG_warelephant: [SCOPE.ScriptValue('warelephant_in_army_svalue')]"
+		debug_log = "DEBUG_horse_archers: [SCOPE.ScriptValue('horse_archers_in_army_svalue')]"
+		debug_log = "DEBUG_archers: [SCOPE.ScriptValue('archers_in_army_svalue')]"
+		debug_log = "DEBUG_camels: [SCOPE.ScriptValue('camels_in_army_svalue')]"
+		debug_log = "DEBUG_light_cavalry: [SCOPE.ScriptValue('light_cavalry_in_army_svalue')]"
+		debug_log = "DEBUG_supply_train: [SCOPE.ScriptValue('supply_train_in_army_svalue')]"
+		debug_log = "DEBUG_engineer_cohort: [SCOPE.ScriptValue('engineer_cohort_in_army_svalue')]"
+		debug_log = "DEBUG_NEWUNIT"
+
+		scope:other_unit = {
+			save_scope_as = "current_unit"
+		}
+		save_scope_as = "other_unit"
+		scope:current_unit = {
+			save_scope_as = "current_unit"
+			unit_owner = {
+				debug_log = "DEBUG_defender: [THIS.GetCountry.GetNameWithNoTooltip]"
+				debug_log = "DEBUG_country culture: [THIS.GetCountry.GetPrimaryCulture.GetNameWithNoTooltip]"
+			}
+			if = {
+				limit = {
+					exists = commander
+				}
+				commander = {
+					debug_log = "DEBUG_commander: [THIS.GetCharacter.GetNameWithNoTooltip]"
+					debug_log = "DEBUG_commander martial: [THIS.GetCharacter.GetMartial]"
+					debug_log = "DEBUG_commander culture: [THIS.GetCharacter.GetCulture.GetNameWithNoTooltip]"
+				}
+			}
+			debug_log = "DEBUG_light_infantry: [SCOPE.ScriptValue('light_infantry_in_army_svalue')]"
+			debug_log = "DEBUG_heavy_infantry: [SCOPE.ScriptValue('heavy_infantry_in_army_svalue')]"
+			debug_log = "DEBUG_heavy_cavalry: [SCOPE.ScriptValue('heavy_cavalry_in_army_svalue')]"
+			debug_log = "DEBUG_warelephant: [SCOPE.ScriptValue('warelephant_in_army_svalue')]"
+			debug_log = "DEBUG_horse_archers: [SCOPE.ScriptValue('horse_archers_in_army_svalue')]"
+			debug_log = "DEBUG_archers: [SCOPE.ScriptValue('archers_in_army_svalue')]"
+			debug_log = "DEBUG_camels: [SCOPE.ScriptValue('camels_in_army_svalue')]"
+			debug_log = "DEBUG_light_cavalry: [SCOPE.ScriptValue('light_cavalry_in_army_svalue')]"
+			debug_log = "DEBUG_supply_train: [SCOPE.ScriptValue('supply_train_in_army_svalue')]"
+			debug_log = "DEBUG_engineer_cohort: [SCOPE.ScriptValue('engineer_cohort_in_army_svalue')]"
+			debug_log = "DEBUG_END"
+		}
+
+		#debug_log = "RUNROME2BATTLE"
+    }
+
+	#destroy_subunit = yes
+	#destroy_unit = yes
+	#damage_unit_morale_percent = 0.2
+	#damage_unit_percent = = 0.2
+}

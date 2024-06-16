@@ -1,0 +1,296 @@
+﻿light_infantry_in_army_svalue = {
+	unit_location = {
+		every_unit_in_province = {
+			limit = {
+				OR = {
+					unit_owner = {
+						war_with = scope:other_unit.unit_owner
+					}
+					THIS = scope:current_unit
+					unit_owner = {
+						OR = {
+							alliance_with = scope:current_unit.unit_owner
+							is_subject_of = scope:current_unit.unit_owner
+						}
+					}
+				}
+			}
+			every_sub_unit = {
+				limit = {
+					sub_unit_type = light_infantry
+				}
+				add = 1
+			}
+		}
+	}
+}
+
+heavy_infantry_in_army_svalue = {
+	unit_location = {
+		every_unit_in_province = {
+			limit = {
+				OR = {
+					unit_owner = {
+						war_with = scope:other_unit.unit_owner
+					}
+					THIS = scope:current_unit
+					unit_owner = {
+						OR = {
+							alliance_with = scope:current_unit.unit_owner
+							is_subject_of = scope:current_unit.unit_owner
+						}
+					}
+				}
+			}
+			every_sub_unit = {
+				limit = {
+					sub_unit_type = heavy_infantry
+				}
+				add = 1
+			}
+		}
+	}
+}
+
+heavy_cavalry_in_army_svalue = {
+	unit_location = {
+		every_unit_in_province = {
+			limit = {
+				OR = {
+					unit_owner = {
+						war_with = scope:other_unit.unit_owner
+					}
+					THIS = scope:current_unit
+					unit_owner = {
+						OR = {
+							alliance_with = scope:current_unit.unit_owner
+							is_subject_of = scope:current_unit.unit_owner
+						}
+					}
+				}
+			}
+			every_sub_unit = {
+				limit = {
+					sub_unit_type = heavy_cavalry
+				}
+				add = 1
+			}
+		}
+	}
+}
+
+warelephant_in_army_svalue = {
+	unit_location = {
+		every_unit_in_province = {
+			limit = {
+				OR = {
+					unit_owner = {
+						war_with = scope:other_unit.unit_owner
+					}
+					THIS = scope:current_unit
+					unit_owner = {
+						OR = {
+							alliance_with = scope:current_unit.unit_owner
+							is_subject_of = scope:current_unit.unit_owner
+						}
+					}
+				}
+			}
+			every_sub_unit = {
+				limit = {
+					sub_unit_type = warelephant
+				}
+				add = 1
+			}
+		}
+	}
+}
+
+horse_archers_in_army_svalue = {
+	unit_location = {
+		every_unit_in_province = {
+			limit = {
+				OR = {
+					unit_owner = {
+						war_with = scope:other_unit.unit_owner
+					}
+					THIS = scope:current_unit
+					unit_owner = {
+						OR = {
+							alliance_with = scope:current_unit.unit_owner
+							is_subject_of = scope:current_unit.unit_owner
+						}
+					}
+				}
+			}
+			every_sub_unit = {
+				limit = {
+					sub_unit_type = horse_archers
+				}
+				add = 1
+			}
+		}
+	}
+}
+
+archers_in_army_svalue = {
+	unit_location = {
+		every_unit_in_province = {
+			limit = {
+				OR = {
+					unit_owner = {
+						war_with = scope:other_unit.unit_owner
+					}
+					THIS = scope:current_unit
+					unit_owner = {
+						OR = {
+							alliance_with = scope:current_unit.unit_owner
+							is_subject_of = scope:current_unit.unit_owner
+						}
+					}
+				}
+			}
+			every_sub_unit = {
+				limit = {
+					sub_unit_type = archers
+				}
+				add = 1
+			}
+		}
+	}
+}
+
+camels_in_army_svalue = {
+	unit_location = {
+		every_unit_in_province = {
+			limit = {
+				OR = {
+					unit_owner = {
+						war_with = scope:other_unit.unit_owner
+					}
+					THIS = scope:current_unit
+					unit_owner = {
+						OR = {
+							alliance_with = scope:current_unit.unit_owner
+							is_subject_of = scope:current_unit.unit_owner
+						}
+					}
+				}
+			}
+			every_sub_unit = {
+				limit = {
+					sub_unit_type = camels
+				}
+				add = 1
+			}
+		}
+	}
+}
+
+light_cavalry_in_army_svalue = {
+	unit_location = {
+		every_unit_in_province = {
+			limit = {
+				OR = {
+					unit_owner = {
+						war_with = scope:other_unit.unit_owner
+					}
+					THIS = scope:current_unit
+					unit_owner = {
+						OR = {
+							alliance_with = scope:current_unit.unit_owner
+							is_subject_of = scope:current_unit.unit_owner
+						}
+					}
+				}
+			}
+			every_sub_unit = {
+				limit = {
+					sub_unit_type = light_cavalry
+				}
+				add = 1
+			}
+		}
+	}
+}
+
+spearmen_in_army_svalue = {
+	unit_location = {
+		every_unit_in_province = {
+			limit = {
+				OR = {
+					unit_owner = {
+						war_with = scope:other_unit.unit_owner
+					}
+					THIS = scope:current_unit
+					unit_owner = {
+						OR = {
+							alliance_with = scope:current_unit.unit_owner
+							is_subject_of = scope:current_unit.unit_owner
+						}
+					}
+				}
+			}
+			every_sub_unit = {
+				limit = {
+					sub_unit_type = spearmen
+				}
+				add = 1
+			}
+		}
+	}
+}
+
+supply_train_in_army_svalue = {
+	unit_location = {
+		every_unit_in_province = {
+			limit = {
+				OR = {
+					unit_owner = {
+						war_with = scope:other_unit.unit_owner
+					}
+					THIS = scope:current_unit
+					unit_owner = {
+						OR = {
+							alliance_with = scope:current_unit.unit_owner
+							is_subject_of = scope:current_unit.unit_owner
+						}
+					}
+				}
+			}
+			every_sub_unit = {
+				limit = {
+					sub_unit_type = supply_train
+				}
+				add = 1
+			}
+		}
+	}
+}
+
+engineer_cohort_in_army_svalue = {
+	unit_location = {
+		every_unit_in_province = {
+			limit = {
+				OR = {
+					unit_owner = {
+						war_with = scope:other_unit.unit_owner
+					}
+					THIS = scope:current_unit
+					unit_owner = {
+						OR = {
+							alliance_with = scope:current_unit.unit_owner
+							is_subject_of = scope:current_unit.unit_owner
+						}
+					}
+				}
+			}
+			every_sub_unit = {
+				limit = {
+					sub_unit_type = engineer_cohort
+				}
+				add = 1
+			}
+		}
+	}
+}
